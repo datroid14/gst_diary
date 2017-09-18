@@ -1,0 +1,47 @@
+<h4>Item Info</h4>
+<div layout="column" style="margin:10px" flex="75" flex-xs="100">
+
+    <md-card flex>
+
+        <md-card-content class="md-padding">
+            <div layout="row" class="h3 b p">Add New Product</div>
+
+            <md-input-container class="md-block" flex="60" flex-xs="100">
+                <label>Product Code</label>
+                <input class="" name="product_code" ng-model="product_code" required/>
+                <span ng-show="isNameEmpty" style="color:red">Product Code is required.</span>
+            </md-input-container>
+
+            <md-input-container class="md-block" flex="60" flex-xs="100">
+                <label>Product Name</label>
+                <input class="" name="product_name" ng-model="product_name" required/>
+                <span ng-show="isNameEmpty" style="color:red">Product Name is required.</span>
+            </md-input-container>
+
+            <md-input-container class="md-block" flex="60" flex-xs="100">
+                <label>Product Description</label>
+                <input class="advanceFormElement" name="product_desc" ng-model="product_desc" required/>
+                <span ng-show="isAmountEmpty" style="color:red">Product Description is required.</span>
+            </md-input-container>
+
+            <md-input-container class="md-block" flex="60" flex-xs="100">
+                <label>Price</label>
+                <input class="advanceFormElement" name="price" ng-model="price" required/>
+                <span ng-show="isAmountEmpty" style="color:red">Price is required.</span>
+            </md-input-container>
+
+            <md-input-container class="md-block" flex="60" flex-xs="100">
+                <label>GST Percentage</label>
+                <input class="advanceFormElement" name="gst_perc" ng-model="gst_perc" required/>
+                <span ng-show="isAmountEmpty" style="color:red">GST Percentage is required.</span>
+            </md-input-container>
+
+        </md-card-content>
+
+        <md-card-actions layout="row" layout-align="right">
+            <md-button class="md-primary md-raised" ng-click="SaveButtonClick()">Save</md-button>
+            <md-button class="md-primary md-raised" ng-click="EditButtonClick()">Update</md-button>
+            <md-button class="md-primary md-raised" ng-click="CancelButtonClick()">Cancel</md-button>
+        </md-card-actions>
+    </md-card>
+</div>

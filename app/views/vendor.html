@@ -1,0 +1,54 @@
+<h4>Vendor Info</h4>
+<div layout="column" style="margin:10px" flex="75" flex-xs="100">
+
+    <md-card flex>
+
+        <md-card-content class="md-padding">
+            <div layout="row" class="h3 b p">Add New Vendor</div>
+
+            <md-input-container class="md-block" flex="60" flex-xs="100">
+                <label>Vendor Name</label>
+                <input class="" name="vendor_name" ng-model="vendor_name" required/>
+                <span ng-show="isNameEmpty" style="color:red">Name is required.</span>
+            </md-input-container>
+
+            <md-input-container class="md-block" flex="60" flex-xs="100">
+                <label>Contact Person</label>
+                <input class="advanceFormElement" name="contact_person" ng-model="contact_person" required/>
+                <span ng-show="isAmountEmpty" style="color:red">Contact Person is required.</span>
+            </md-input-container>
+
+            <md-input-container class="md-block" flex="60" flex-xs="100">
+                <label>Contact Number</label>
+                <input class="advanceFormElement" name="contact_no" ng-model="contact_no" required/>
+                <span ng-show="isAmountEmpty" style="color:red">Contact Number is required.</span>
+            </md-input-container>
+
+            <md-input-container class="md-block" flex="60" flex-xs="100">
+                <label>Email</label>
+                <input class="advanceFormElement" name="vendor_mail" ng-model="vendor_mail" required/>
+                <span ng-show="isAmountEmpty" style="color:red">Email is required.</span>
+            </md-input-container>
+
+            <md-input-container class="md-block" flex="60" flex-xs="100">
+                <label>Address line 1</label>
+                <input class="advanceFormElement" name="vendor_address1" ng-model="vendor_address1" required/>
+                <span ng-show="isAmountEmpty" style="color:red">Address line 1 is required.</span>
+            </md-input-container>
+
+            <md-input-container class="md-block" flex="60" flex-xs="100">
+                <label>Address line 2</label>
+                <input class="advanceFormElement" name="vendor_address2" ng-model="vendor_address2" required/>
+                <span ng-show="isAmountEmpty" style="color:red">Address line 2 is required.</span>
+            </md-input-container>
+
+
+        </md-card-content>
+
+        <md-card-actions layout="row" layout-align="right">
+            <md-button class="md-primary md-raised" ng-click="SaveButtonClick()">Save</md-button>
+            <md-button class="md-primary md-raised" ng-click="EditButtonClick()">Update</md-button>
+            <md-button class="md-primary md-raised" ng-click="CancelButtonClick()">Cancel</md-button>
+        </md-card-actions>
+    </md-card>
+</div>

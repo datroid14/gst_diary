@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="app/js/libs/am/angular-material.css">
+    <link rel="stylesheet" href="app/css/style.css">
+</head>
+
+<body ng-app="gstDiaryApp" style="overflow:hidden">
+    <div layout="column">
+        <div class="" layout="row">
+            <md-toolbar>
+            </md-toolbar>
+        </div>
+        <div layout="row">
+            <div layout="row" flex="20">
+                <md-sidenav style="height:100% " class="md-sidenav-left " md-component-id="left " md-is-locked-open="true " md-whiteframe="4 ">
+                    <md-content layout-padding layout="column">
+
+                        <md-input-container>
+                            <a ui-sref="dashboard">Dashboard</a>
+                        </md-input-container>
+                        <md-input-container>
+                            <a ui-sref="client">Client</a>
+                        </md-input-container>
+                        <md-input-container>
+                            <a ui-sref="vendor">Vendor</a>
+                        </md-input-container>
+                        <md-input-container>
+                            <a ui-sref="product">Items</a>
+                        </md-input-container>
+                        <md-input-container>
+                            <a ui-sref="invoices">Invoices</a>
+                        </md-input-container>
+                        <md-input-container>
+                            <a ui-sref="quotes">Quotes</a>
+                        </md-input-container>
+                        <md-input-container>
+                            <a ui-sref="deliveryNotes">Delivery Notes</a>
+                        </md-input-container>
+                        <md-input-container>
+                            <a ui-sref="reports">Reports</a>
+                        </md-input-container>
+                    </md-content>
+                </md-sidenav>
+            </div>
+            <div flex="70" ui-view></div>
+        </div>
+        <!-- <md-content layout-padding layout="column">
+                        <md-input-container>
+                            <a ui-sref="employee">Home</a>
+                        </md-input-container>
+                        <md-input-container>
+                            <a ui-sref="dashboard">Dashboard</a>
+                        </md-input-container>
+                        <md-input-container>
+                            <a ui-sref="client">client</a>
+                        </md-input-container>
+                        <md-input-container>
+                            <a ui-sref="client">Items</a>
+                        </md-input-container>
+                        <md-input-container>
+                            <a ui-sref="client">Invoices</a>
+                        </md-input-container>
+                        <md-input-container>
+                            <a ui-sref="client">Quotes</a>
+                        </md-input-container>
+                        <md-input-container>
+                            <a ui-sref="client">Delivery Notes</a>
+                        </md-input-container>
+                        <md-input-container>
+                            <a ui-sref="client">Reports</a>
+                        </md-input-container>
+                    </md-content> -->
+        <!-- </md-sidenav>
+            </div> -->
+        <!-- <div ui-view></div> -->
+        <!-- </div>
+    </div> -->
+
+        <!-- Angular Material requires Angular.js Libraries -->
+        <script src="app/js/libs/angular.js "></script>
+        <script src="app/js/libs/angular-ui-router.js"></script>
+        <script src="app/js/libs/angular-material.js "></script>
+        <script src="app/js/libs/angular-animate.js "></script>
+        <script src="app/js/libs/angular-aria.js "></script>
+        <script src="app/js/libs/angular-messages.js "></script>
+        <script src="app/js/app.js"></script>
+
+
+</body>
+
+</html>
