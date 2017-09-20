@@ -47,3 +47,73 @@
     max-width: 100%;
     max-height: calc(200% / 3);
 }
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+    .mainDiv {
+        /* background-image: url("../img/bg.jpg"); */
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 60%;
+        width: 500px;
+        background-size: cover;
+    }
+    .subTitle {
+        margin-left: 10%;
+        color: #d7df00;
+    }
+}
+
+.mainDiv {
+    background-image: url("../img/bg.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 60%;
+    width: 100%;
+    top: 20%;
+    position: absolute;
+    background-size: cover;
+}
+
+@media (min-width: 960px)
+angular-material.css:173
+.md-padding {
+     padding: 0px !important;
+}
+.md-padding {
+     padding: 8px !important;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background: #BDBDBD;
+    color: black;
+  }
+   
+  p.circle.ng-binding {
+    text-align: center;
+  }
+   
+  .selectedIndex {
+    background: #5BBBFF;
+    color: white;
+  }
+   
+  .selectedIndex .circle {
+    width: 30px;
+    height: 30px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background: white;
+    color: black;
+  }
+
+  .cardStyle{
+      padding: 10px;
+      /* margin: 10px; */
+  }

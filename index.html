@@ -1,11 +1,11 @@
-<html>
+<html ng-app="gstDiaryApp">
 
 <head>
     <link rel="stylesheet" href="app/js/libs/am/angular-material.css">
     <link rel="stylesheet" href="app/css/style.css">
 </head>
 
-<body ng-app="gstDiaryApp" style="overflow:hidden">
+<!-- <body style="overflow:hidden">
     <div layout="column">
         <div class="" layout="row">
             <md-toolbar>
@@ -43,49 +43,65 @@
                     </md-content>
                 </md-sidenav>
             </div>
-            <div flex="70" ui-view></div>
+            <md-content flex="70" ui-view></md-content>
+        </div> -->
+
+<body layout="column" ng-controller="mainController" ng-cloak flex style="padding-top: 0;">
+    <md-toolbar class="md-hue-2" style="background-color:#0194DA;">
+        <div class="md-toolbar-tools">
+            <md-button hide-gt-xs ng-show="!isHomePage" class="md-icon-button" aria-label="Side-Panel" ng-click="toggleSideNav()">
+                <i class="material-icons">dehaze</i>
+            </md-button>
+            <!--
+              <md-button class="md-icon-button" aria-label="Favorite">
+                <ng-md-icon icon="insert_drive_file"> </ng-md-icon>
+              </md-button> -->
+            <span flex></span>
+            <div ng-hide="MC.currentState=='login'" layout="row" layout-align="end start" flex>
+                <div flex-xs="50" class="h3 sb l" style="margin-top:1%;">{{userData.empName}}</div>
+                <md-button flex-xs="50" ng-click="MC.showConfirm($event)" aria-label="logout" class="md-icon-button md-default">
+                    <md-icon md-svg-icon="app/img/icons/power.svg"></md-icon>
+                </md-button>
+            </div>
         </div>
-        <!-- <md-content layout-padding layout="column">
-                        <md-input-container>
-                            <a ui-sref="employee">Home</a>
-                        </md-input-container>
-                        <md-input-container>
-                            <a ui-sref="dashboard">Dashboard</a>
-                        </md-input-container>
-                        <md-input-container>
-                            <a ui-sref="client">client</a>
-                        </md-input-container>
-                        <md-input-container>
-                            <a ui-sref="client">Items</a>
-                        </md-input-container>
-                        <md-input-container>
-                            <a ui-sref="client">Invoices</a>
-                        </md-input-container>
-                        <md-input-container>
-                            <a ui-sref="client">Quotes</a>
-                        </md-input-container>
-                        <md-input-container>
-                            <a ui-sref="client">Delivery Notes</a>
-                        </md-input-container>
-                        <md-input-container>
-                            <a ui-sref="client">Reports</a>
-                        </md-input-container>
-                    </md-content> -->
-        <!-- </md-sidenav>
-            </div> -->
-        <!-- <div ui-view></div> -->
-        <!-- </div>
-    </div> -->
+    </md-toolbar>
 
-        <!-- Angular Material requires Angular.js Libraries -->
-        <script src="app/js/libs/angular.js "></script>
-        <script src="app/js/libs/angular-ui-router.js"></script>
-        <script src="app/js/libs/angular-material.js "></script>
-        <script src="app/js/libs/angular-animate.js "></script>
-        <script src="app/js/libs/angular-aria.js "></script>
-        <script src="app/js/libs/angular-messages.js "></script>
-        <script src="app/js/app.js"></script>
+    <md-content id="main_div" layout="row" flex>
+        
+        <!-- side nav -->
+        <md-card ng-show="!isHomePage">
+            <md-sidenav class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-xs')" class="md-whiteframe-4dp">
+                    <h1 class="md-toolbar-tools" style="color:white; background-color:#7B7B7B;height:48px;">
+                            Travel Request</h1>
+                  <md-content >
+                        
+                    <md-list id="md-list" style="padding-top:0px;"flex>
+                      
+                      <md-list-item ng-repeat="items in menuList" ng-click="showClickedItem($index)">
+                        <md-divider></md-divider>
+           
+                        <div class="md-list-item-text">{{items.menu_title}} </div>
+    
+                      </md-list-item>
+                    </md-list>
+                  </md-content>
+            </md-sidenav>
+        </md-card>
 
+        <md-content flex ui-view ng-cloak load-more="{{MC.currentState}}" class="main-content"></md-content>
+   
+    </md-content>
+
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="app/js/libs/angular.js "></script>
+    <script src="app/js/libs/angular-ui-router.js"></script>
+    <script src="app/js/libs/angular-material.js "></script>
+    <script src="app/js/libs/angular-animate.js "></script>
+    <script src="app/js/libs/angular-aria.js "></script>
+    <script src="app/js/libs/angular-messages.js "></script>
+    <script src="app/js/app.js"></script>
+    <script type="text/javascript" src="app/js/controllers/mainController.js"></script>
+    <script type="text/javascript" src="app/js/controllers/loginController.js"></script>
 
 </body>
 

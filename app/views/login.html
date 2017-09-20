@@ -1,0 +1,31 @@
+<div layout="row" flex="flex" style="width:600px; margin-left:2%;">
+    <md-card flex>
+
+        <md-card-content>
+            <form name="loginForm" novalidate="novalidate">
+                <div class="login-header">LOGIN</div>
+                <md-input-container class="md-icon-float md-primary md-block">
+                    <label>Username</label>
+                    <input ng-model="LC.user.username" type="text" required="required" autofocus="autofocus" name="username" />
+                    <div ng-messages="loginForm.username.$error">
+                        <div ng-message="required">Username is required.</div>
+                    </div>
+                </md-input-container>
+                <md-input-container class="md-icon-float md-primary md-block">
+                    <label>Password</label>
+                    <input ng-model="LC.user.password" type="password" required="required" name="password" />
+                    <div ng-messages="loginForm.password.$error">
+                        <div ng-message="required">Password is required.</div>
+                    </div>
+                </md-input-container>
+            </form>
+
+        </md-card-content>
+
+        <md-card-actions layout="row" layout-align="center">
+            <md-button class="md-primary md-raised" ng-click="login()">Login</md-button>
+            <md-button class="md-primary md-raised">Reset</md-button>
+        </md-card-actions>
+    </md-card>
+
+</div>

@@ -4,24 +4,30 @@ var gstDiary = angular.module('gstDiaryApp', ['ngMaterial', 'ngAnimate', 'ngAria
 
 gstDiary.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
     // For any unmatched url, send to /employee
-    $urlRouterProvider.otherwise("/index")
+    $urlRouterProvider.otherwise("/login")
 
     $stateProvider
+        .state('login', {
+            url: "/login",
+            templateUrl: "app/views/login.html",
+            controller: "loginController",
+            controllerAs: "LC"
+        })
         .state('dashboard', {
             url: "/dashboard",
             templateUrl: "app/views/dashboard.html"
         })
-        .state('client', {
-            url: "/client",
+        .state('clients', {
+            url: "/clients",
             templateUrl: "app/views/client.html"
         })
-        .state('vendor', {
-            url: "/vendor",
+        .state('vendors', {
+            url: "/vendors",
             templateUrl: "app/views/vendor.html"
         })
 
-        .state('product', {
-            url: "/product",
+        .state('products', {
+            url: "/products",
             templateUrl: "app/views/items.html"
         })
 
@@ -38,12 +44,12 @@ gstDiary.config(['$stateProvider', '$urlRouterProvider', function ($stateProvide
             templateUrl: "app/views/deliveryNotes.html"
         })
 
-        .state('reports', {
-            url: "/reports",
+        .state('purchase', {
+            url: "/purchase",
             templateUrl: "app/views/reports.html"
         })
-        .state('company', {
-            url: "/company",
+        .state('aboutUs', {
+            url: "/aboutUs",
             templateUrl: "app/views/company.html"
         })
 
