@@ -1,9 +1,6 @@
-<!-- <div layout="column" style="margin:10px" flex="75" flex-xs="100"> -->
-
-    <md-card class="cardStyle" flex>
-
+<div layout="row" flex>
+    <md-card class="cardStyle" layout="column" style="margin:10px" flex="75" flex-xs="100" flex>
         <h4>Vendor Info</h4>
-
         <md-card-content class="md-padding">
             <div layout="row" class="h3 b p">Add New Vendor</div>
 
@@ -51,5 +48,13 @@
             <md-button class="md-primary md-raised" ng-click="EditButtonClick()">Update</md-button>
             <md-button class="md-primary md-raised" ng-click="CancelButtonClick()">Cancel</md-button>
         </md-card-actions>
+
     </md-card>
-<!-- </div> -->
+
+    <md-card class="cardStyle" layout="column" style="margin:10px" flex="25" flex-xs="100" flex>
+
+        <h4>Vendor List</h4>
+
+    </md-card>
+
+</div>

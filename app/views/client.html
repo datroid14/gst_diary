@@ -1,10 +1,7 @@
-<h4>Client Info</h4>
-<div layout="column" style="margin:10px" flex-xs="100">
-
-    <md-card flex>
-
+<div layout="row" flex style="margin:10px" flex-xs="100">
+    <md-card class="cardStyle" layout="column" style="margin:10px" flex="75" flex-xs="100" flex>
+        <h4>Client Info</h4>
         <md-card-content class="md-padding">
-            <div layout="row" class="h3 b p">Add New Client</div>
 
             <md-input-container class="md-block" flex="60" flex-xs="100">
                 <label>Client Name</label>
@@ -45,4 +42,11 @@
             <md-button class="md-primary md-raised" ng-click="CancelButtonClick()">Cancel</md-button>
         </md-card-actions>
     </md-card>
+
+    <md-card class="cardStyle" layout="column" style="margin:10px" flex="25" flex-xs="100" flex>
+
+        <h4>Client List</h4>
+
+    </md-card>
+
 </div>

@@ -17,36 +17,36 @@ gstDiary.config(['$stateProvider', '$urlRouterProvider', function ($stateProvide
             url: "/dashboard",
             templateUrl: "app/views/dashboard.html"
         })
-        .state('clients', {
-            url: "/clients",
+        .state('client', {
+            url: "/client",
             templateUrl: "app/views/client.html"
         })
-        .state('vendors', {
-            url: "/vendors",
+        .state('vendor', {
+            url: "/vendor",
             templateUrl: "app/views/vendor.html"
         })
 
-        .state('products', {
-            url: "/products",
-            templateUrl: "app/views/items.html"
+        .state('product', {
+            url: "/product",
+            templateUrl: "app/views/product.html"
         })
 
-        .state('invoices', {
-            url: "/invoices",
-            templateUrl: "app/views/invoices.html"
+        .state('invoice', {
+            url: "/invoice",
+            templateUrl: "app/views/invoice.html"
         })
-        .state('quotes', {
-            url: "/quotes",
-            templateUrl: "app/views/quotes.html"
+        .state('quote', {
+            url: "/quote",
+            templateUrl: "app/views/quote.html"
         })
-        .state('deliveryNotes', {
-            url: "/deliveryNotes",
-            templateUrl: "app/views/deliveryNotes.html"
+        .state('deliveryNote', {
+            url: "/deliveryNote",
+            templateUrl: "app/views/deliveryNote.html"
         })
 
         .state('purchase', {
             url: "/purchase",
-            templateUrl: "app/views/reports.html"
+            templateUrl: "app/views/purchase.html"
         })
         .state('aboutUs', {
             url: "/aboutUs",

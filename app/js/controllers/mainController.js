@@ -1,7 +1,7 @@
 
-gstDiary.controller('mainController', function ($scope, $state, $http) {
+gstDiary.controller('mainController', function ($scope, $state, $http, $rootScope) {
 
-    $scope.isHome = false;
+    $rootScope.isHome = false;
 
     $scope.menuList = [{
         "menu_title": "Client"
@@ -24,17 +24,17 @@ gstDiary.controller('mainController', function ($scope, $state, $http) {
     $scope.showClickedItem = function (index) {
 
         if (index == 0) {
-            $state.go('clients');
+            $state.go('client');
         } else if (index == 1) {
-            $state.go('vendors');
+            $state.go('vendor');
         } else if (index == 2) {
-            $state.go('products');
+            $state.go('product');
         } else if (index == 3) {
-            $state.go('quotes');
+            $state.go('quote');
         } else if (index == 4) {
-            $state.go('deliveryNotes');
+            $state.go('deliveryNote');
         } else if (index == 5) {
-            $state.go('invoices');
+            $state.go('invoice');
         } else if (index == 6) {
             $state.go('purchase');
         } else if (index == 7) {

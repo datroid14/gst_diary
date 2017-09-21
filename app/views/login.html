@@ -1,4 +1,4 @@
-<div layout="row" flex="flex" style="width:600px; margin-left:2%;">
+<div layout="row" ng-controller="loginController" layout-align="center center" flex="flex" style="width:600px; margin:20px;">
     <md-card flex>
 
         <md-card-content>
@@ -6,14 +6,15 @@
                 <div class="login-header">LOGIN</div>
                 <md-input-container class="md-icon-float md-primary md-block">
                     <label>Username</label>
-                    <input ng-model="LC.user.username" type="text" required="required" autofocus="autofocus" name="username" />
+                    <input ng-model="username" type="text" required="required" autofocus="autofocus" name="username" ng-init="admin"/>
                     <div ng-messages="loginForm.username.$error">
                         <div ng-message="required">Username is required.</div>
                     </div>
                 </md-input-container>
                 <md-input-container class="md-icon-float md-primary md-block">
                     <label>Password</label>
-                    <input ng-model="LC.user.password" type="password" required="required" name="password" />
+                    <div loading-bar></div>
+                    <input ng-model="password" type="password" name="password" ng-init="admin" required />
                     <div ng-messages="loginForm.password.$error">
                         <div ng-message="required">Password is required.</div>
                     </div>

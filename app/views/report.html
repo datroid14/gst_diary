@@ -1,0 +1,52 @@
+<div layout="row" flex style="margin:10px" flex-xs="100">
+        <md-card class="cardStyle" layout="column" style="margin:10px" flex="75" flex-xs="100" flex>
+            <h4>Purchase Info</h4>
+            <md-card-content class="md-padding">
+    
+                <md-input-container class="md-block" flex="60" flex-xs="100">
+                    <label>Client Name</label>
+                    <input class="" name="client_name" ng-model="client_name" required/>
+                    <span ng-show="isNameEmpty" style="color:red">Name is required.</span>
+                </md-input-container>
+    
+                <md-input-container class="md-block" flex="60" flex-xs="100">
+                    <label>Contact Number</label>
+                    <input class="advanceFormElement" name="contact_no" ng-model="contact_no" required/>
+                    <span ng-show="isAmountEmpty" style="color:red">Contact Number is required.</span>
+                </md-input-container>
+    
+                <md-input-container class="md-block" flex="60" flex-xs="100">
+                    <label>Email</label>
+                    <input class="advanceFormElement" name="client_mail" ng-model="client_mail" required/>
+                    <span ng-show="isAmountEmpty" style="color:red">Email is required.</span>
+                </md-input-container>
+    
+                <md-input-container class="md-block" flex="60" flex-xs="100">
+                    <label>Address line 1</label>
+                    <input class="advanceFormElement" name="client_address1" ng-model="client_address1" required/>
+                    <span ng-show="isAmountEmpty" style="color:red">Address is required.</span>
+                </md-input-container>
+    
+                <md-input-container class="md-block" flex="60" flex-xs="100">
+                    <label>Address line 2</label>
+                    <input class="advanceFormElement" name="client_address2" ng-model="client_address2" required/>
+                    <span ng-show="isAmountEmpty" style="color:red">Address is required.</span>
+                </md-input-container>
+    
+    
+            </md-card-content>
+    
+            <md-card-actions layout="row" layout-align="right">
+                <md-button class="md-primary md-raised" ng-click="SaveButtonClick()">Save</md-button>
+                <md-button class="md-primary md-raised" ng-click="EditButtonClick()">Update</md-button>
+                <md-button class="md-primary md-raised" ng-click="CancelButtonClick()">Cancel</md-button>
+            </md-card-actions>
+        </md-card>
+    
+        <md-card class="cardStyle" layout="column" style="margin:10px" flex="25" flex-xs="100" flex>
+    
+            <h4>Purchase List</h4>
+    
+        </md-card>
+    
+    </div>
