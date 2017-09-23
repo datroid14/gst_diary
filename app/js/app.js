@@ -10,8 +10,7 @@ gstDiary.config(['$stateProvider', '$urlRouterProvider', function ($stateProvide
         .state('login', {
             url: "/login",
             templateUrl: "app/views/login.html",
-            controller: "loginController",
-            controllerAs: "LC"
+            controller: "loginController"
         })
         .state('dashboard', {
             url: "/dashboard",
@@ -19,34 +18,41 @@ gstDiary.config(['$stateProvider', '$urlRouterProvider', function ($stateProvide
         })
         .state('client', {
             url: "/client",
-            templateUrl: "app/views/client.html"
+            templateUrl: "app/views/client.html",
+            controller: "invoiceCtrl"
         })
         .state('vendor', {
             url: "/vendor",
-            templateUrl: "app/views/vendor.html"
+            templateUrl: "app/views/vendor.html",
+            controller: "invoiceCtrl"
         })
 
         .state('product', {
             url: "/product",
-            templateUrl: "app/views/product.html"
+            templateUrl: "app/views/product.html",
+            controller: "invoiceCtrl"
         })
 
         .state('invoice', {
             url: "/invoice",
-            templateUrl: "app/views/invoice.html"
+            templateUrl: "app/views/invoice.html",
+            controller: "invoiceCtrl"
         })
         .state('quote', {
             url: "/quote",
-            templateUrl: "app/views/quote.html"
+            templateUrl: "app/views/quote.html",
+            controller: "invoiceCtrl"
         })
         .state('deliveryNote', {
             url: "/deliveryNote",
-            templateUrl: "app/views/deliveryNote.html"
+            templateUrl: "app/views/deliveryNote.html",
+            controller: "invoiceCtrl"
         })
 
         .state('purchase', {
             url: "/purchase",
-            templateUrl: "app/views/purchase.html"
+            templateUrl: "app/views/purchase.html",
+            controller: "invoiceCtrl"
         })
         .state('aboutUs', {
             url: "/aboutUs",
