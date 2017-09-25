@@ -29,8 +29,8 @@
 
                 <md-input-container class="md-block" flex="50" flex-xs="100">
                     <label>Product Name</label>
-                    <input class="advanceFormElement" name="product_name" ng-model="product_name" required/>
-                    <span ng-show="isAmountEmpty" style="color:red">Price is required.</span>
+                    <input class="advanceFormElement" name="productName" ng-model="productName" required/>
+                    <span ng-show="isAmountEmpty" style="color:red">Product Name is required.</span>
                 </md-input-container>
 
                 <md-input-container class="md-block" flex="10" flex-xs="100">
@@ -41,17 +41,18 @@
 
                 <md-input-container class="md-block" flex="10" flex-xs="100">
                     <label>Quantity</label>
-                    <input class="advanceFormElement" name="quantity" ng-model="quantity" required/>
-                    <span ng-show="isAmountEmpty" style="color:red">GST Percentage is required.</span>
+                    <input class="advanceFormElement" type="number" name="quantity" ng-model="quantity" ng-change="calculateSubTotal()" 
+                    min="0" max="10" required/>
+                    <span ng-show="isAmountEmpty" style="color:red">Quantity is required.</span>
                 </md-input-container>
 
                 <md-input-container class="md-block" flex="20" flex-xs="100">
                     <label>Sub Total</label>
-                    <input class="advanceFormElement" name="sub_total" ng-model="sub_total" required/>
-                    <span ng-show="isAmountEmpty" style="color:red">GST Percentage is required.</span>
+                    <input class="advanceFormElement" name="subTotal" ng-model="subTotal" required/>
+                    <span ng-show="isAmountEmpty" style="color:red">Sub Total is required.</span>
                 </md-input-container>
 
-                <img src="app/img/icons/add.svg" alt="add" class="travelimage" flex="5" style="padding:8px;margin-bottom:12px;" ng-click="productAddButtonClick();">
+                <img src="app/img/icons/add.svg" alt="add" class="travelimage" flex="5" style="padding:8px;margin-bottom:12px;" ng-click="addProduct();">
 
             </div>
 
@@ -63,14 +64,14 @@
                             <h4>Products Added ({{productList.length}})</h4>
                         </md-toolbar>
                         <div>
-                            <md-list-item ng-repeat="product in productList" ng-click="ListItemClick($index)" class="backcolor" ng-class="{selectedIndex: currentSelectedIndex===$index}">
+                            <md-list-item ng-repeat="product in productList" ng-click="productListItemClick($index)" class="backcolor" ng-class="{selectedIndex: currentSelectedIndex===$index}">
                                 <div layout="row" flex="100" class="cardDataAlignment">
                                     <div layout="column" flex="85">
                                         <span class="textfontStyle">
                                             {{product.name}}-{{product.price}}</span>
                                     </div>
                                     <div flex="15">
-                                        <md-button ng-click="delete($index)">
+                                        <md-button ng-click="deleteProduct($index)">
                                             <i class="material-icons">delete</i>
                                         </md-button>
                                     </div>
