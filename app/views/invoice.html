@@ -1,4 +1,4 @@
-<div layout="row" flex style="margin:10px" flex-xs="100">
+<div layout="row" flex>
     <md-card class="cardStyle" layout="column" style="margin:10px" flex="75" flex-xs="100" flex>
         <h4>Invoice Info</h4>
         <md-card-content class="md-padding">
@@ -11,11 +11,11 @@
 
             <md-input-container class="md-block" flex="60" flex-xs="100">
                 <label>Invoice Date</label>
-                <input mdc-datetime-picker="" date="true" time="false" type="text" ng-model="invoice_date" max-date="" class=" md-input" readonly="readonly" 
-                  required>
+                <input mdc-datetime-picker="" date="true" time="false" type="text" ng-model="invoice_date" max-date="" class=" md-input"
+                    readonly="readonly" required>
                 <div class="md-errors-spacer"></div>
                 <span ng-show="startDateUndefined" class="alertsize">Invoice Date is required.</span>
-              </md-input-container>
+            </md-input-container>
 
             <md-input-container class="md-block" flex="60" flex-xs="100">
                 <label>Customer Name</label>
@@ -41,8 +41,8 @@
 
                 <md-input-container class="md-block" flex="10" flex-xs="100">
                     <label>Quantity</label>
-                    <input class="advanceFormElement" type="number" name="quantity" ng-model="quantity" ng-change="calculateSubTotal()" 
-                    min="0" max="10" required/>
+                    <input class="advanceFormElement" type="number" name="quantity" ng-model="quantity" ng-change="calculateSubTotal()" min="0"
+                        max="10" required/>
                     <span ng-show="isAmountEmpty" style="color:red">Quantity is required.</span>
                 </md-input-container>
 
@@ -59,8 +59,8 @@
             <md-card md-whiteframe="10" class="availedcardmarginTop">
                 <md-card-content>
 
-                    <md-list >
-                        <md-toolbar layout="row" >
+                    <md-list>
+                        <md-toolbar layout="row">
                             <h4>Products Added ({{productList.length}})</h4>
                         </md-toolbar>
                         <div>
@@ -68,7 +68,7 @@
                                 <div layout="row" flex="100" class="cardDataAlignment">
                                     <div layout="column" flex="85">
                                         <span class="textfontStyle">
-                                            {{product.name}}-{{product.price}}</span>
+                                            {{product.name}} - {{product.price}}</span>
                                     </div>
                                     <div flex="15">
                                         <md-button ng-click="deleteProduct($index)">
@@ -80,6 +80,11 @@
                             </md-list-item>
                         </div>
                     </md-list>
+
+                    <md-input-container class="md-block" flex="30" flex-xs="100" layout="row" layout-align="center right">
+                        <label>Total Amount</label>
+                        <input class="advanceFormElement" name="totalAmount" ng-model="totalAmount" required/>
+                    </md-input-container>
                 </md-card-content>
             </md-card>
 

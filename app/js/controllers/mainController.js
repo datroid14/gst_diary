@@ -1,7 +1,8 @@
 
 gstDiary.controller('mainController', function ($scope, $state, $http, $rootScope) {
 
-    $rootScope.isHome = false;
+    $rootScope.isHome = true;
+    console.log("isHome Main", $rootScope.isHome);
 
     $scope.menuList = [{
         "menu_title": "Client"

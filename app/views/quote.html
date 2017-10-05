@@ -1,4 +1,4 @@
-<div layout="row" flex style="margin:10px" flex-xs="100">
+<div layout="row" flex >
     <md-card class="cardStyle" layout="column" style="margin:10px" flex="75" flex-xs="100" flex>
         <h4>Quatation Info</h4>
         <md-card-content class="md-padding">
@@ -25,37 +25,47 @@
 
             <div layout="row">
 
-                <md-input-container class="md-block" flex="50" flex-xs="100">
+                <md-input-container class="md-block" flex="75" flex-xs="100">
                     <label>Product Name</label>
                     <input class="advanceFormElement" name="price" ng-model="price" required/>
                     <span ng-show="isAmountEmpty" style="color:red">Price is required.</span>
                 </md-input-container>
 
-                <md-input-container class="md-block" flex="10" flex-xs="100">
+                <md-input-container class="md-block" flex="20" flex-xs="100">
                     <label>Price</label>
                     <input class="advanceFormElement" name="price" ng-model="price" required/>
                     <span ng-show="isAmountEmpty" style="color:red">Price is required.</span>
                 </md-input-container>
 
-                <md-input-container class="md-block" flex="10" flex-xs="100">
-                    <label>Quantity</label>
-                    <input class="advanceFormElement" name="gst_perc" ng-model="gst_perc" required/>
-                    <span ng-show="isAmountEmpty" style="color:red">GST Percentage is required.</span>
-                </md-input-container>
-
-                <md-input-container class="md-block" flex="20" flex-xs="100">
-                    <label>Sub Total</label>
-                    <input class="advanceFormElement" name="gst_perc" ng-model="gst_perc" required/>
-                    <span ng-show="isAmountEmpty" style="color:red">GST Percentage is required.</span>
-                </md-input-container>
+                <img src="app/img/icons/add.svg" alt="add" class="travelimage" flex="5" style="padding:8px;margin-bottom:12px;" ng-click="addProduct();">
 
             </div>
 
-            <md-input-container class="md-block" flex="30" flex-xs="100" layout="row" layout-align="center right">
-                <label>Total Amount</label>
-                <input class="advanceFormElement" name="total_amount" ng-model="total_amount" required/>
-                <span ng-show="isAmountEmpty" style="color:red">Price is required.</span>
-            </md-input-container>
+            <md-card md-whiteframe="10" class="availedcardmarginTop">
+                <md-card-content>
+                    <md-list>
+                        <md-toolbar layout="row">
+                            <h4>Products Quoted ({{productList.length}})</h4>
+                        </md-toolbar>
+                        <div>
+                            <md-list-item ng-repeat="product in productList" ng-click="productListItemClick($index)" class="backcolor" ng-class="{selectedIndex: currentSelectedIndex===$index}">
+                                <div layout="row" flex="100" class="cardDataAlignment">
+                                    <div layout="column" flex="85">
+                                        <span class="textfontStyle">
+                                                {{product.name}} - {{product.price}}</span>
+                                    </div>
+                                    <div flex="15">
+                                        <md-button ng-click="deleteProduct($index)">
+                                            <i class="material-icons">delete</i>
+                                        </md-button>
+                                    </div>
+                                </div>
+                                <md-divider></md-divider>
+                            </md-list-item>
+                        </div>
+                    </md-list>
+                </md-card-content>
+            </md-card>
 
         </md-card-content>
 

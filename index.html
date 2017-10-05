@@ -50,7 +50,7 @@
 <body layout="column" ng-controller="mainController" ng-cloak flex style="padding-top: 0;">
     <md-toolbar class="md-hue-2" style="background-color:#0194DA;">
         <div class="md-toolbar-tools">
-            <md-button hide-gt-xs ng-show="!isHomePage" class="md-icon-button" aria-label="Side-Panel" ng-click="toggleSideNav()">
+            <md-button hide-gt-xs ng-show="isHomePage" class="md-icon-button" aria-label="Side-Panel" ng-click="toggleSideNav()">
                 <i class="material-icons">dehaze</i>
             </md-button>
             <!--
